@@ -39,7 +39,7 @@ contract Degen is ERC20, Ownable {
     }
 
     function burn(uint256 amount) public {
-        require(amount > 0 && balanceOf(msg.sender) >= amount, "Insufficient balance");
+        require(amount > 0 && balanceOf(msg.sender) >= amount);
         _burn(msg.sender, amount);
     }
 
